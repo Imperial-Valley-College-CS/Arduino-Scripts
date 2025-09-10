@@ -15,18 +15,24 @@ void loop() {
   if( Serial.available() > 0 )
   {
     num = Serial.parseInt();
+    turnLEDSoff();       //invoke function to turn off LEDS
     int i = 0;
     while( num > 0 )
     {
       if( num % 2 == 1 )
       {
         digitalWrite(leds[i], HIGH);
-      }else
-      {
-        digitalWrite(leds[i], LOW);
       }
       num = num/2;
       i++;
     }
   }//end if
 }//end loop
+
+void turnLEDSoff()
+{
+  for(int i = 0; i < sizeof(leds); i++)
+  {
+    digitalWrite(leds[i], LOW);
+  }
+}
