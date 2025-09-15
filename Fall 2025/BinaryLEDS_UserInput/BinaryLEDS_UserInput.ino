@@ -12,10 +12,11 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if( Serial.available() > 0 )
+  if( Serial.available() > 0 )    //Checks if number is entered to Serial monitor
   {
-    num = Serial.parseInt();
     turnLEDSoff();       //invoke function to turn off LEDS
+    num = Serial.parseInt();    //read number from Serial monitor
+    //Serial.println( num );
     int i = 0;
     while( num > 0 )
     {
