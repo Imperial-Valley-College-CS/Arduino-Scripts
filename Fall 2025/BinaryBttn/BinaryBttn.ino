@@ -1,6 +1,7 @@
 int bttnPin = 4;
 int bttnValue = 0;
 int leds[] = {2,3,4,5};
+int h = 1;
 
 void setup() {
   // put your setup code here, to run once:
@@ -15,14 +16,13 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   bttnValue = digitalRead(bttnPin);
-  //Serial.println( bttnValue );
-  int h = 1;
-  while( h < 16 )
+  dispBinary(h);
+  if( bttnValue == 1 )
   {
-    dispBinary(h);
     h++;
-    delay(1000);
   }
+  delay(500);
+  turnLEDSoff();
 }
 
 void dispBinary( int num )
@@ -39,5 +39,13 @@ void dispBinary( int num )
     }
     num = num/2;
     i++;
+  }
+}
+
+void turnLEDSoff()
+{
+  for(int i = 0; i < sizeof(leds); i++)
+  {
+    digitalWrite(leds[i], LOW);
   }
 }
