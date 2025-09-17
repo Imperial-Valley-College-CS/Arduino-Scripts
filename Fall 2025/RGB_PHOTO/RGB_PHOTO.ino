@@ -24,11 +24,15 @@ void loop() {
   redValue = analogRead(redSensor);
   greenValue = analogRead(greenSensor);
   blueValue = analogRead(blueSensor);
-  Serial.print(redValue);Serial.print( ", " );
-  Serial.print(greenValue);Serial.print( ", " );
-  Serial.print(blueValue);
-  Serial.println();
-  delay(1000);
+  int red = map(redValue, 668, 860, 0, 255);
+  int green = map(greenValue, 645, 877, 0, 255);
+  int blue = map(blueValue, 607, 873, 0, 255);
+  setColor(red, green, blue);
+  delay(500);
+//  Serial.print(redValue);Serial.print( ", " );
+//  Serial.print(greenValue);Serial.print( ", " );
+//  Serial.print(blueValue);
+//  Serial.println();
 }
 
 void setColor(int red, int green, int blue)
