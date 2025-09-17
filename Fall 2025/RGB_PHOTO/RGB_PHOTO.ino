@@ -24,9 +24,9 @@ void loop() {
   redValue = analogRead(redSensor);
   greenValue = analogRead(greenSensor);
   blueValue = analogRead(blueValue);
-  Serial.print(redValue + " " );
-  Serial.print(greenValue + " " );
-  Serial.print(blueValue + " " );
+  Serial.print(redValue);Serial.print( ", " );
+  Serial.print(greenValue);Serial.print( ", " );
+  Serial.print(blueValue);
   Serial.println();
   delay(1000);
 }
