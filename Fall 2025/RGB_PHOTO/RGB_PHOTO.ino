@@ -23,7 +23,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   redValue = analogRead(redSensor);
   greenValue = analogRead(greenSensor);
-  blueValue = analogRead(blueValue);
+  blueValue = analogRead(blueSensor);
   Serial.print(redValue);Serial.print( ", " );
   Serial.print(greenValue);Serial.print( ", " );
   Serial.print(blueValue);
