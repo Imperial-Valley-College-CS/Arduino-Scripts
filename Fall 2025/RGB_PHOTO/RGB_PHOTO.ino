@@ -10,6 +10,7 @@ int blueValue;
 
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(9600);
   pinMode(redPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
   pinMode(greenPin, OUTPUT);
@@ -20,5 +21,19 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  redValue = analogRead(redSensor);
+  greenValue = analogRead(greenSensor);
+  blueValue = analogRead(blueValue);
+  Serial.print(redValue + " " );
+  Serial.print(greenValue + " " );
+  Serial.print(blueValue + " " );
+  Serial.println();
+  delay(1000);
+}
 
+void setColor(int red, int green, int blue)
+{
+  analogWrite(redPin, red);
+  analogWrite(greenPin, green);
+  analogWrite(bluePin, blue);
 }
