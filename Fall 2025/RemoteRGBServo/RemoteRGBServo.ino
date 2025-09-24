@@ -29,6 +29,18 @@ void loop() {
     {
       setColor(80, 143, 4);
     }
+    if( results.value == UP_KEY || results.value == DOWN_KEY )
+    {
+      if( results.value == UP_KEY )
+      {
+        pos = pos + 5;
+      }else
+      {
+        pos = pos - 5;
+      }
+      
+      myServo.write(pos);
+    }
     //write code to move servomotor
     Serial.println( results.value, HEX );
     irrecv.resume();    //resume receiver
