@@ -1,15 +1,21 @@
+#include "TimerOne.h";
 #include <IRremote.h>
 #include <Servo.h>
 #define ON_OFF_KEY 0xFF629D
 #define A_KEY 0xFF22DD
+#define UP_KEY 0xFF9867
+#define DOWN_KEY 0xFF38C7
 
 int sensorPin = 11;
 int redPin = A0;
 int greenPin = A1;
 int bluePin = A2;
+int pos = 0;
 
 IRrecv irrecv(sensorPin);
 decode_results results;
+
+Servo myServo;
 
 void setup() {
   // put your setup code here, to run once:
@@ -19,6 +25,7 @@ void setup() {
   pinMode(redPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
+  myServo.attach(9);
 }
 
 void loop() {
