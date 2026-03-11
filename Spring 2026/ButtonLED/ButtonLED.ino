@@ -21,6 +21,7 @@ void loop() {
     digitalWrite(ledPin, LOW);
     ledState = 0;
   }
+  delay(300);   //time to remove finger off button
 }
 
 void blinkLED( int pin, int dt)
