@@ -9,7 +9,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  sensorValue = analogRead(sensorPin);
+  sensorValue = (5.0/1023.0)*analogRead(sensorPin);
   Serial.println( sensorValue );
   delay(500);
 }
