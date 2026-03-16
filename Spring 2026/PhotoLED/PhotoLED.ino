@@ -13,7 +13,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   sensorValue = (5.0/1023.0)*analogRead(sensorPin);
-  if( sensorValue >= mid )
+  if( sensorValue < mid )
   {
     digitalWrite( ledPin, HIGH );
   }else
