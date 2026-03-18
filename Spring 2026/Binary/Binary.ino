@@ -10,7 +10,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  
+  displayBin(13);
 }
 
 void displayBin( int num )
@@ -24,5 +24,13 @@ void displayBin( int num )
     }
     num = num/2;
     x++;
+  }
+}
+
+void turnOFFLeds()
+{
+  for( int x = 0; x < sizeof( ledPins); x++ )
+  {
+    digitalWrite(ledPins[x], LOW);
   }
 }
