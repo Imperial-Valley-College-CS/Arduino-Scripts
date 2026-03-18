@@ -10,7 +10,12 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  displayBin(13);
+  for( int x = 1; x <= 15; x++ )
+  {
+    displayBin(x);
+    delay(1000);
+    turnOFFLeds();
+  }
 }
 
 void displayBin( int num )
