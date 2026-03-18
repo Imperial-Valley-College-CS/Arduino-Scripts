@@ -1,4 +1,5 @@
 int ledPins[] = {13, 12, 11, 10};   //13-8 bit, 12-4 bit, 11-2 bit
+String myName = "Octavio Ortiz";
 
 void setup() {
   // put your setup code here, to run once:
@@ -28,6 +29,7 @@ void displayBin( int num )
       digitalWrite(ledPins[x], HIGH);
     }
     num = num/2;
+    Serial.println(num);
     x++;
   }
 }
