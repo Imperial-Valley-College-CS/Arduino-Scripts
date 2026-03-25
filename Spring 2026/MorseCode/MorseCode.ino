@@ -5,7 +5,7 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   pinMode(12, OUTPUT);
-  morse("fun");
+  morse("a");
 }
 
 void loop() {
@@ -90,6 +90,7 @@ void dash()
   digitalWrite(12,LOW);
   delay(3*t);
 }
+
 void printMessage()
 {
   for( int i = 0; i < message.length(); i++ )
