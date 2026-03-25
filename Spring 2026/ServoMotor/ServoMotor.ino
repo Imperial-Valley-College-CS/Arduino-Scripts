@@ -10,10 +10,10 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  for( int deg = 0; deg <= 180; deg = deg + 5 )
+  for( int deg = 0; deg <= 180; deg++ )
   {
     myservo.write(deg);
-    delay(100);
+    delay(15);
   }
   
 }
