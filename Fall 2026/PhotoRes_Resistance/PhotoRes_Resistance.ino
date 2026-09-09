@@ -11,6 +11,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   v2 = analogRead(A0)*5.0/1023.0;
-  Serial.println(v2);
+  photoRes = (Vs/v2)*R2-R2;
+  Serial.println(photoRes);
   delay(500);
 }
