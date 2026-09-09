@@ -13,5 +13,6 @@ void loop() {
   v2 = analogRead(A0)*5.0/1023.0;
   photoRes = (Vs/v2)*R2-R2;
   Serial.println(photoRes);
+  Serial.println(v2);
   delay(500);
 }
