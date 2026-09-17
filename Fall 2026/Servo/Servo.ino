@@ -9,10 +9,9 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  myservo.write(-90);
-  delay(500);
-  myservo.write(0);
-  delay(500);
-  myservo.write(90);
-  delay(500);
+  for( int i = 0; i <= 180; i++)
+  {
+    myservo.write(i);
+    delay(30);
+  }
 }
