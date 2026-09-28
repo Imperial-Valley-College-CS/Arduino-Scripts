@@ -1,8 +1,9 @@
 int b1 = 13;
 int b2 = 12;
 int spacePin = 11;
-int dotDelay = 500;
+int dotDelay = 300;
 int dashDelay = 3*dotDelay;
+String someWord = "dad";
 
 void setup() {
   // put your setup code here, to run once:
@@ -13,12 +14,24 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  dash(); dot(); dot();
-  space();
+  for( int i = 0; i < someWord.length(); i++ )
+  {
+    switch( someWord.charAt(i) )
+    {
+      case 'a': letA(); break;
+      case 'b': letB(); break;
+    }
+  }
+}
+
+void letA()
+{
   dot(); dash();
-  space();
-  dash(); dot(); dot();
-  
+}
+
+void letD()
+{
+  dash(); dot(); dot(); ;
 }
 
 void dot()
