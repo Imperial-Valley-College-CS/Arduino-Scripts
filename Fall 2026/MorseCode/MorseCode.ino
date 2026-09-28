@@ -19,8 +19,9 @@ void loop() {
     switch( someWord.charAt(i) )
     {
       case 'a': letA(); break;
-      case 'b': letB(); break;
+      case 'd': letD(); break;
     }
+    space();
   }
 }
 
